@@ -33,6 +33,40 @@ export const metadata: Metadata = {
   },
 };
 
+const proxyFixScript = `
+  try {
+    const isProxy = window.self !== window.top || window.location.hostname.includes('ruttl');
+    if (isProxy) {
+      window.IntersectionObserver = class MockObserver {
+        constructor(callback) {
+          this.callback = callback;
+        }
+        observe(element) {
+          setTimeout(() => {
+            this.callback([{ isIntersecting: true, target: element, intersectionRatio: 1 }]);
+          }, 50);
+        }
+        unobserve() {}
+        disconnect() {}
+      };
+    }
+  } catch(e) {
+    // Accessing window.top from cross-origin iframe throws SecurityError
+    window.IntersectionObserver = class MockObserver {
+      constructor(callback) {
+        this.callback = callback;
+      }
+      observe(element) {
+        setTimeout(() => {
+          this.callback([{ isIntersecting: true, target: element, intersectionRatio: 1 }]);
+        }, 50);
+      }
+      unobserve() {}
+      disconnect() {}
+    };
+  }
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,7 +77,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable} antialiased`}
     >
-      <body className="min-h-screen bg-[#0a0a0f] font-[family-name:var(--font-inter)]">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: proxyFixScript }} />
+      </head>
+      <body className="min-h-screen bg-[#0a0a0f] font-[family-name:var(--font-inter)]" suppressHydrationWarning>
         {children}
       </body>
     </html>
