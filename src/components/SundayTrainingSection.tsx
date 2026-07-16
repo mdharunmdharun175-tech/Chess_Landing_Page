@@ -6,8 +6,8 @@ import { useIsVisible } from "@/hooks/useIsVisible";
 const achievements = [
   { value: 50, suffix: "+", label: "Tournament Players", icon: "🏆" },
   { value: 75, suffix: "%", label: "Win Rate Improvement", icon: "📈" },
-  { value: 50, suffix: "+", label: "Sunday Sessions/Year", icon: "📅" },
-  { value: 48, suffix: "+", label: "Tournaments Covered", icon: "🎯" },
+  { value: 48, suffix: "+", label: "Sunday Sessions/Year", icon: "📅" },
+  { value: 100, suffix: "+", label: "Tournaments Covered", icon: "🎯" },
 ];
 
 function AnimatedCounter({ target, suffix, isInView }: { target: number; suffix: string; isInView: boolean }) {
