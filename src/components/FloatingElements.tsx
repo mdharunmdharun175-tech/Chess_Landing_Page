@@ -34,19 +34,24 @@ export default function FloatingElements() {
         <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20" />
       </a>
 
-      {/* Book a free demo floating button */}
+      {/* 3D Animated Book Now floating button */}
       <a
         href="#demo"
-        className="fixed bottom-20 md:bottom-[7rem] right-4 md:right-6 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white shadow-lg shadow-gold/30 hover:shadow-gold/50 transition-all duration-300 hover:scale-110 active:scale-95 animate-[float_6s_ease-in-out_infinite_0.5s]"
+        className="btn-3d-book fixed bottom-20 md:bottom-[7rem] right-4 md:right-6 z-50 !w-12 !h-12 md:!w-14 md:!h-14 !rounded-full !p-0 !flex-col !gap-0.5 animate-[float_6s_ease-in-out_infinite_0.5s]"
         title="Book a Free Demo"
         aria-label="Book a Free Demo"
       >
-        <img
-          src="/book-now4.png"
-          alt="Book a Free Demo"
-          className="w-full h-full object-cover rounded-full scale-[1]"
-        />
-        <span className="absolute inset-0 rounded-full bg-gold animate-ping opacity-20" />
+        {/* Calendar Icon */}
+        <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+          <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
+        </svg>
+        <span className="text-[6px] md:text-[7px] font-bold tracking-wider leading-none">BOOK NOW</span>
+        {/* Pulse ring */}
+        <span className="absolute inset-0 rounded-full bg-[#1a3a52] animate-ping opacity-20" />
       </a>
 
       {/* Back to top button */}

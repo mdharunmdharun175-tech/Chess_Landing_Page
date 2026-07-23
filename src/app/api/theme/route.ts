@@ -10,7 +10,7 @@ export async function GET() {
     const color = await getThemeBackgroundColor();
     return NextResponse.json({ backgroundColor: color });
   } catch (error) {
-    return NextResponse.json({ backgroundColor: "#fff8e6" }, { status: 500 });
+    return NextResponse.json({ backgroundColor: "#f3f4f6" }, { status: 500 });
   }
 }
 

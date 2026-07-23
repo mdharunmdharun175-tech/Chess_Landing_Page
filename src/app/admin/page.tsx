@@ -18,10 +18,10 @@ import {
 } from 'lucide-react';
 
 const PRESET_COLORS = [
-  { name: 'Warm Cream (Default)', hex: '#fff8e6', textDark: true },
+  { name: 'Light Gray (Default)', hex: '#f3f4f6', textDark: true },
+  { name: 'Warm Cream', hex: '#fff8e6', textDark: true },
   { name: 'Soft Linen', hex: '#f8f7f2', textDark: true },
   { name: 'Pure White', hex: '#ffffff', textDark: true },
-  { name: 'Light Gray', hex: '#f3f4f6', textDark: true },
   { name: 'Soft Amber', hex: '#fffbeb', textDark: true },
   { name: 'Mint Fresh', hex: '#f0fdf4', textDark: true },
   { name: 'Dark Navy', hex: '#0f172a', textDark: false },
@@ -36,8 +36,8 @@ export default function AdminDashboardPage() {
   const [metrics, setMetrics] = useState<any>(null);
   
   // Dynamic Theme state
-  const [activeGlobalColor, setActiveGlobalColor] = useState('#fff8e6');
-  const [selectedColor, setSelectedColor] = useState('#fff8e6');
+  const [activeGlobalColor, setActiveGlobalColor] = useState('#f3f4f6');
+  const [selectedColor, setSelectedColor] = useState('#f3f4f6');
   const [savingTheme, setSavingTheme] = useState(false);
   const [themeStatus, setThemeStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
@@ -397,13 +397,13 @@ export default function AdminDashboardPage() {
               <button 
                 type="button"
                 onClick={() => {
-                  handlePreviewColor('#fff8e6');
-                  handleSaveTheme('#fff8e6');
+                  handlePreviewColor('#f3f4f6');
+                  handleSaveTheme('#f3f4f6');
                 }}
                 disabled={savingTheme}
                 className="border border-gray-300 text-gray-700 bg-white px-4 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center justify-center gap-2 text-sm disabled:opacity-50"
               >
-                <RotateCcw className="w-4 h-4" /> Reset Default (#fff8e6)
+                <RotateCcw className="w-4 h-4" /> Reset Default (#f3f4f6)
               </button>
 
               <button 

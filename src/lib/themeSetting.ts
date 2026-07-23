@@ -2,7 +2,7 @@ import { prisma } from "./prisma";
 import fs from "fs";
 import path from "path";
 
-export const DEFAULT_BG_COLOR = "#fff8e6";
+export const DEFAULT_BG_COLOR = "#f3f4f6";
 
 const DATA_DIR = path.join(process.cwd(), ".data");
 const THEME_FILE = path.join(DATA_DIR, "theme.json");

@@ -20,12 +20,12 @@ const contactEmail = "nexachessacademy@gmail.com";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden">
-      {/* Top blue border line */}
-      <div className="h-1 bg-[#1a3a52] w-full" />
+    <footer className="relative overflow-hidden bg-[#0f172a] text-white">
+      {/* Top gold border line */}
+      <div className="h-[3px] bg-[#d4a843] w-full" />
 
-      {/* Background */}
-      <div className="absolute inset-0 chess-pattern opacity-10" />
+      {/* Background pattern */}
+      <div className="absolute inset-0 chess-pattern opacity-5 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-10">
@@ -38,27 +38,14 @@ export default function Footer() {
                 className="w-24 h-24 md:w-12 md:h-12 drop-shadow-lg object-contain"
               />
             </div>
-            <p className="text-sm text-text-secondary leading-relaxed mb-6">
+            <p className="text-sm text-slate-300 leading-relaxed mb-6">
               Professional online chess training for students of all levels. Building champions since 2018.
             </p>
-
-            {/* Social icons */}
-            {/* <div className="flex gap-3">
-              {["📸", "▶️", "👍"].map((icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-lg border border-dark-border hover:border-gold/30 flex items-center justify-center text-base transition-all duration-300 hover:bg-gold/5 hover:scale-110 active:scale-95"
-                >
-                  {icon}
-                </a>
-              ))}
-            </div> */}
           </div>
 
           {/* Quick Links */}
           <div className="reveal reveal-up" style={{ transitionDelay: '0.1s' }}>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2.5">
@@ -66,9 +53,9 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-text-secondary hover:text-gold transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-sm text-slate-300 hover:text-amber-400 transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    <span className="text-gold/40 text-xs transition-transform duration-300 group-hover:translate-x-1">›</span>
+                    <span className="text-amber-400/60 text-xs transition-transform duration-300 group-hover:translate-x-1">›</span>
                     {link.label}
                   </a>
                 </li>
@@ -78,7 +65,7 @@ export default function Footer() {
 
           {/* Programs */}
           <div className="reveal reveal-up" style={{ transitionDelay: '0.2s' }}>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Programs
             </h4>
             <ul className="space-y-2.5">
@@ -86,9 +73,9 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-text-secondary hover:text-gold transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-sm text-slate-300 hover:text-amber-400 transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    <span className="text-gold/40 text-xs transition-transform duration-300 group-hover:translate-x-1">›</span>
+                    <span className="text-amber-400/60 text-xs transition-transform duration-300 group-hover:translate-x-1">›</span>
                     {link.label}
                   </a>
                 </li>
@@ -98,22 +85,22 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="reveal reveal-up" style={{ transitionDelay: '0.3s' }}>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Contact Info
             </h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-sm text-text-secondary">
-                <span className="text-gold mt-0.5">📞</span>
+              <li className="flex items-start gap-3 text-sm text-slate-300">
+                <span className="text-amber-400 mt-0.5">📞</span>
                 +91 7010854643
               </li>
-              <li className="flex items-start gap-3 text-sm text-text-secondary">
-                <span className="text-gold mt-0.5">✉️</span>
-                <a href={`mailto:${contactEmail}`} className="hover:text-gold transition-colors">
+              <li className="flex items-start gap-3 text-sm text-slate-300">
+                <span className="text-amber-400 mt-0.5">✉️</span>
+                <a href={`mailto:${contactEmail}`} className="hover:text-amber-400 transition-colors">
                   {contactEmail}
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-sm text-text-secondary">
-                <span className="text-gold mt-0.5">🌐</span>
+              <li className="flex items-start gap-3 text-sm text-slate-300">
+                <span className="text-amber-400 mt-0.5">🌐</span>
                 Available Worldwide
               </li>
             </ul>
@@ -121,15 +108,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-dark-border flex flex-col sm:flex-row items-center justify-between gap-4 reveal reveal-up" style={{ transitionDelay: '0.4s' }}>
-          <p className="text-xs text-text-muted">
+        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 reveal reveal-up" style={{ transitionDelay: '0.4s' }}>
+          <p className="text-xs text-slate-400">
             © {new Date().getFullYear()} Nexa Chess Academy. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-text-muted hover:text-gold transition-colors">
+            <a href="#" className="text-xs text-slate-400 hover:text-amber-400 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-xs text-text-muted hover:text-gold transition-colors">
+            <a href="#" className="text-xs text-slate-400 hover:text-amber-400 transition-colors">
               Terms of Service
             </a>
           </div>

@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export const DEFAULT_BG = "#fff8e6";
+export const DEFAULT_BG = "#f3f4f6";
 
 export default function ThemeProvider() {
   useEffect(() => {
