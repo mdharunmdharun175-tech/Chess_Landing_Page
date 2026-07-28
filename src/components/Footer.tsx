@@ -32,10 +32,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1 reveal reveal-up flex flex-col items-center text-center md:items-start md:text-left" style={{ transitionDelay: '0s' }}>
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/nexa_logo.png" 
-                alt="NEXA Chess Academy" 
-                className="w-24 h-24 md:w-12 md:h-12 drop-shadow-lg object-contain"
+              <img
+                src="/nexa_logo_dark1.png"
+                alt="NEXA Chess Academy"
+                className="h-14 md:h-16 w-auto object-contain drop-shadow-lg"
               />
             </div>
             <p className="text-sm text-slate-300 leading-relaxed mb-6">

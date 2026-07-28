@@ -6,8 +6,8 @@ export const DemoRegistrationSchema = z.object({
   parentName: z.string().min(1, 'All fields are required.'),
   age: z.string().refine((val) => {
     const num = parseInt(val, 10);
-    return !isNaN(num) && num >= 4 && num <= 18;
-  }, 'Student age must be between 4 and 18.'),
+    return !isNaN(num) && num > 0;
+  }, 'Please enter a valid age.'),
   experience: z.enum(['beginner', 'intermediate', 'advanced'], {
     message: 'Please select a valid experience level.',
   }),

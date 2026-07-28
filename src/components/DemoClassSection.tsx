@@ -147,8 +147,7 @@ export default function DemoClassSection() {
                       <input
                         type="number"
                         required
-                        min="4"
-                        max="18"
+                        min="1"
                         value={formData.age}
                         onChange={(e) => setFormData({ ...formData, age: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold/40 text-text-primary placeholder:text-text-muted/50 outline-none transition-all duration-300 text-sm"

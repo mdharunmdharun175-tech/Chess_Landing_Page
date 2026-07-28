@@ -9,7 +9,7 @@ export const runtime = 'nodejs';
 
 const validationMessages = new Set([
   'All fields are required.',
-  'Student age must be between 4 and 18.',
+  'Please enter a valid age.',
   'Please select a valid experience level.',
   'Contact number must be exactly 10 digits.',
 ]);
