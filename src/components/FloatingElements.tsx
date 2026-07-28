@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function FloatingElements() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -25,9 +26,11 @@ export default function FloatingElements() {
         className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-500 flex items-center justify-center text-white text-2xl shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 active:scale-95 animate-[float_6s_ease-in-out_infinite]"
         aria-label="Chat on WhatsApp"
       >
-        <img
+        <Image
           src="/WhatsApp-Logo.wine.svg"
-          alt="WhatsApp"
+          alt="WhatsApp Logo"
+          width={56}
+          height={56}
           className="w-full h-full object-cover rounded-full"
         />
         {/* Pulse ring */}

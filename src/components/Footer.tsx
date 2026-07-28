@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const quickLinks = [
   { label: "Home", href: "#home" },
   { label: "Programs", href: "#programs" },
@@ -32,9 +34,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1 reveal reveal-up flex flex-col items-center text-center md:items-start md:text-left" style={{ transitionDelay: '0s' }}>
             <div className="flex items-center gap-3 mb-4">
-              <img
+              <Image
                 src="/nexa_logo_dark1.png"
-                alt="NEXA Chess Academy"
+                alt="Nexa Chess Academy Logo"
+                width={180}
+                height={68}
+                loading="lazy"
                 className="h-14 md:h-16 w-auto object-contain drop-shadow-lg"
               />
             </div>
@@ -45,9 +50,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="reveal reveal-up" style={{ transitionDelay: '0.1s' }}>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Quick Links
-            </h4>
+            </h3>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
@@ -65,9 +70,9 @@ export default function Footer() {
 
           {/* Programs */}
           <div className="reveal reveal-up" style={{ transitionDelay: '0.2s' }}>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Programs
-            </h4>
+            </h3>
             <ul className="space-y-2.5">
               {programs.map((link) => (
                 <li key={link.label}>
@@ -85,9 +90,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="reveal reveal-up" style={{ transitionDelay: '0.3s' }}>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Contact Info
-            </h4>
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-slate-300">
                 <span className="text-amber-400 mt-0.5">📞</span>

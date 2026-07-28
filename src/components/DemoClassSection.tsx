@@ -112,10 +112,11 @@ export default function DemoClassSection() {
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
+                    <label htmlFor="student-name" className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
                       Student Name
                     </label>
                     <input
+                      id="student-name"
                       type="text"
                       required
                       value={formData.name}
@@ -126,10 +127,11 @@ export default function DemoClassSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
+                    <label htmlFor="parent-name" className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
                       Parent Name
                     </label>
                     <input
+                      id="parent-name"
                       type="text"
                       required
                       value={formData.parentName}
@@ -141,10 +143,11 @@ export default function DemoClassSection() {
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
+                      <label htmlFor="student-age" className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
                         Student Age
                       </label>
                       <input
+                        id="student-age"
                         type="number"
                         required
                         min="1"
@@ -155,10 +158,11 @@ export default function DemoClassSection() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
+                      <label htmlFor="experience-level" className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
                         Experience Level
                       </label>
                       <select
+                        id="experience-level"
                         required
                         value={formData.experience}
                         onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
@@ -173,10 +177,11 @@ export default function DemoClassSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-phone" className="block text-xs text-text-muted uppercase tracking-wider mb-1.5">
                       Contact Number
                     </label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       required
                       inputMode="numeric"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -19,7 +20,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -35,9 +36,12 @@ export default function Navbar() {
             href="#home"
             className="flex items-center gap-3 group hover:scale-105 transition-transform"
           >
-            <img 
+            <Image 
               src="/nexa_logo_light1.png" 
-              alt="NEXA Chess Academy" 
+              alt="Nexa Chess Academy Logo" 
+              width={180}
+              height={68}
+              priority
               className="h-10 lg:h-14 w-auto object-contain drop-shadow-lg"
             />
           </a>

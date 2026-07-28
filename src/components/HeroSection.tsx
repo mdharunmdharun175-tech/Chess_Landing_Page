@@ -13,20 +13,17 @@ interface Particle {
   delay: number;
 }
 
-export default function HeroSection() {
-  const [particles, setParticles] = useState<Particle[]>([]);
+const initialParticles: Particle[] = Array.from({ length: 20 }, (_, i) => ({
+  id: i,
+  x: (i * 17) % 100,
+  y: (i * 23) % 100,
+  size: (i % 4) + 1.5,
+  duration: 8 + (i % 5) * 2,
+  delay: (i % 3) * 1.5,
+}));
 
-  useEffect(() => {
-    const generated = Array.from({ length: 30 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 1,
-      duration: Math.random() * 10 + 8,
-      delay: Math.random() * 5,
-    }));
-    setParticles(generated);
-  }, []);
+export default function HeroSection() {
+  const [particles] = useState<Particle[]>(initialParticles);
 
   return (
     <section
